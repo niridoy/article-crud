@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('articles.index'));
 });
 
-Route::get('articles/datatable', [ArticleController::class, 'datatable']);
+// Route::get('articles/datatable', [ArticleController::class, 'datatable']);
 Route::resource('articles', ArticleController::class);
 

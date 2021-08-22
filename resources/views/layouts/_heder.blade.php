@@ -6,5 +6,5 @@
     <!-- Bootstrap CSS -->
     <link href="{{ asset("assets//css/bootstrap.min.css") }}" rel="stylesheet" >
 
-    <title> Blog || Article Manage </title>
+    <title> @yield('site-title','Blog || Article Manage ')</title>
   </head>

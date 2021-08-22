@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Storage;
 
 class ArticaleRequest extends FormRequest
 {
@@ -32,8 +33,8 @@ class ArticaleRequest extends FormRequest
             'meta_description' => 'required',
             'meta_keyword' => 'required',
             'category' => 'required',
-            'image' => 'required'
-            // 'image' => ['required','mimes:png,jpg,jpeg','max:1024MB']
+            // 'image' => 'required'
+            'image' => ['sometimes','required','mimes:jpeg,jpg,png,gif','max:1024']
         ];
     }
 }
